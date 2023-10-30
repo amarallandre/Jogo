@@ -1,5 +1,6 @@
-﻿using Jogo.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Jogo.Models; // Adicione esta linha para resolver o erro relacionado a DataBase
+using Microsoft.AspNetCore.Mvc; // Adicione esta linha para resolver os erros relacionados a Controller e IActionResult
+using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 
 namespace Jogo.Controllers
@@ -48,7 +49,8 @@ namespace Jogo.Controllers
             _dbContext.Personagens.Add(novoPersonagem);
             _dbContext.SaveChanges();
 
-            return RedirectToAction("DetalhesPersonagem", new { id = novoPersonagem.Id });
+            // Alteração aqui: redirecione para a ação Index da mesma controller
+            return RedirectToAction("Index");
         }
 
         [HttpPost]
@@ -65,14 +67,30 @@ namespace Jogo.Controllers
                 HttpContext.Session.SetString("PersonagemSelecionado", personagemJson);
             }
 
-            return RedirectToAction("Index", "Home");
+            // Alteração aqui: redirecione para a ação Index da mesma controller
+            return RedirectToAction("Index");
         }
 
         public IActionResult Index()
         {
             var personagens = _dbContext.Personagens.ToList();
+            return View("~/Views/Home/Index.cshtml", personagens);
+        }
+    
 
-            return View(personagens);
+        [HttpPost]
+        public IActionResult ExcluirPersonagem(int personagemId)
+        {
+            var personagemParaExcluir = _dbContext.Personagens.FirstOrDefault(p => p.Id == personagemId);
+
+            if (personagemParaExcluir != null)
+            {
+                _dbContext.Personagens.Remove(personagemParaExcluir);
+                _dbContext.SaveChanges();
+            }
+
+            // Redirecionar de volta para a página de personagens após a exclusão
+            return RedirectToAction("Index", "Personagem");
         }
     }
 }

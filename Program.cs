@@ -31,14 +31,8 @@ app.UseSession(); // Habilita o uso de sessões
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute(
-        name: "Personagem",
-        pattern: "{controller=Personagem}/{action=CriarPersonagem}/{id?}");
-
-    endpoints.MapControllerRoute(
-        name: "SelecionarPersonagem",
-        pattern: "{controller=Personagem}/{action=SelecionarPersonagem}/{id?}");
-
-    endpoints.MapDefaultControllerRoute();
+        name: "default",
+        pattern: "{controller=Personagem}/{action=Index}/{id?}");
 });
 
 app.Run();

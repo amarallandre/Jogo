@@ -15,7 +15,22 @@ h2 {
     text-align: center;
 }
 
-form {
+.Charcreator {
+
+    background: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.nome {
+    font-size: 29px;
+    color: #ff0000;
+}
+
+.personagens {
+    gap: 20px;
+    display:flex;
     background: #ffffff;
     padding: 20px;
     margin-top: 20px;
@@ -38,8 +53,13 @@ select {
     box-sizing: border-box;
 }
 
+.listapersonagem {
+    gap: 40px;
+    padding-top: 20px;
+}
+
 button {
-    background-color: #4caf50;
+    background-color: black;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -47,6 +67,15 @@ button {
     cursor: pointer;
 }
 
-    button:hover {
-        background-color: #45a049;
-    }
+button:hover {
+    background-color: #45a049;
+}
+
+.botoesLista {
+    display: flex;
+    gap: 20px;
+}
+
+.botoesLista button {
+    width: auto;
+}

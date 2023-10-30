@@ -9,7 +9,7 @@
 
     <h2>Criar Personagem</h2>
 
-    <form method="post" asp-action="CriarPersonagem" asp-controller="Personagem">
+    <form class="Charcreator" method="post" asp-action="CriarPersonagem" asp-controller="Personagem">
         <label for="nome">Nome do Personagem:</label>
         <input type="text" id="nome" name="nome" required>
         <br>
@@ -28,26 +28,34 @@
     @model List<Jogo.Models.Personagem>
 
     <!-- Exibição da lista de personagens -->
+    <div class="listapersonagem">
     <h2>Lista de Personagens</h2>
     <ul>
         @if (Model != null)
         {
             foreach (var personagem in Model)
             {
-                <li>
-                    @personagem.Nome
-                    <form method="post" asp-controller="Personagem" asp-action="SelecionarPersonagem">
+            <li class="personagens">
+                    <div class="nome"><strong>@personagem.Nome</strong> - Nível: @personagem.Level, Classe: @personagem.Classe</div>
+                    <form method="post" asp-controller="Personagem" asp-action="SelecionarPersonagem" class="botoesLista">
                         <input type="hidden" name="personagemId" value="@personagem.Id" />
-                        <button type="submit">Selecionar</button>
+                        <button type="submit" class="selecionar">Selecionar</button>
                     </form>
-                </li>
-             }
+
+                    <form method="post" asp-controller="Personagem" asp-action="ExcluirPersonagem" class="botoesLista">
+                        <input type="hidden" name="personagemId" value="@personagem.Id" />
+                        <button type="submit" class="excluir">Excluir</button>
+                    </form>
+             </li>
+             
+            }
         }
         else
         {
             <p>Nenhum personagem disponível.</p>
         }
     </ul>
+    </div>
 
 </body>
 </html>
