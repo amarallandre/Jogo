@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Criar Personagem</title>
+    <link rel="stylesheet" href="~/css/CharCreator.css">
+</head>
+<body>
+
+    <h2>Criar Personagem</h2>
+
+    <form method="post" asp-action="CriarPersonagem" asp-controller="Personagem">
+        <label for="nome">Nome do Personagem:</label>
+        <input type="text" id="nome" name="nome" required>
+        <br>
+
+        <label for="classe">Escolha a Classe:</label>
+        <select id="classe" name="classe" required>
+            <option value="mago">Mago</option>
+            <option value="arqueiro">Arqueiro</option>
+            <option value="guerreiro">Guerreiro</option>
+        </select>
+        <br>
+
+        <button type="submit">Criar Personagem</button>
+    </form>
+
+    @model List<Jogo.Models.Personagem>
+
+    <!-- Exibição da lista de personagens -->
+    <h2>Lista de Personagens</h2>
+    <ul>
+        @if (Model != null)
+        {
+            foreach (var personagem in Model)
+            {
+                <li>
+                    @personagem.Nome
+                    <form method="post" asp-controller="Personagem" asp-action="SelecionarPersonagem">
+                        <input type="hidden" name="personagemId" value="@personagem.Id" />
+                        <button type="submit">Selecionar</button>
+                    </form>
+                </li>
+             }
+        }
+        else
+        {
+            <p>Nenhum personagem disponível.</p>
+        }
+    </ul>
+
+</body>
+</html>
