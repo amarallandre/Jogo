@@ -29,33 +29,41 @@
 
     <!-- Exibição da lista de personagens -->
     <div class="listapersonagem">
-    <h2>Lista de Personagens</h2>
-    <ul>
-        @if (Model != null)
-        {
-            foreach (var personagem in Model)
+        <h2>Lista de Personagens</h2>
+        <ul>
+            @if (Model != null)
             {
-            <li class="personagens">
-                    <div class="nome"><strong>@personagem.Nome</strong> - Nível: @personagem.Level, Classe: @personagem.Classe</div>
-                    <form method="post" asp-controller="Personagem" asp-action="SelecionarPersonagem" class="botoesLista">
-                        <input type="hidden" name="personagemId" value="@personagem.Id" />
-                        <button type="submit" class="selecionar">Selecionar</button>
-                    </form>
+                foreach (var personagem in Model)
+                {
+                    <li class="personagens">
+                        <div class="nome"><strong>@personagem.Nome</strong> - Level: @personagem.Level, Classe: @personagem.Classe</div>
+                        <form method="post" asp-controller="Personagem" asp-action="SelecionarPersonagem" class="botoesLista">
+                            <input type="hidden" name="personagemId" value="@personagem.Id" />
+                            <button type="submit" class="selecionar">Selecionar</button>
+                        </form>
 
-                    <form method="post" asp-controller="Personagem" asp-action="ExcluirPersonagem" class="botoesLista">
-                        <input type="hidden" name="personagemId" value="@personagem.Id" />
-                        <button type="submit" class="excluir">Excluir</button>
-                    </form>
-             </li>
-             
+                        <form method="post" asp-controller="Personagem" asp-action="ExcluirPersonagem" class="botoesLista">
+                            <input type="hidden" name="personagemId" value="@personagem.Id" />
+                            <button type="submit" class="excluir">Excluir</button>
+                        </form>
+                    </li>
+                }
             }
-        }
-        else
-        {
-            <p>Nenhum personagem disponível.</p>
-        }
-    </ul>
+            else
+            {
+                <p>Nenhum personagem disponível.</p>
+            }
+        </ul>
     </div>
+
+    <script>
+        document.querySelectorAll(".selecionar").forEach(function (button) {
+            button.addEventListener("click", function () {
+                var personagemId = this.dataset.personagemId;
+                window.location.href = '~/Jogo/Jogo/' + personagemId;
+            });
+        });
+    </script>
 
 </body>
 </html>

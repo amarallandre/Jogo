@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6amBOkqRvneNsrZrx49bc7o9EBlL7lAzSmc8Ofl6zlY=",
+  "Hash": "6vQ+cClKxn+ZE9LZ/j5BSENQdAJAWLc73N7Ov1FxMdk=",
   "Source": "Jogo",
   "BasePath": "_content/Jogo",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\CharCreator.css"
+    },
+    {
+      "Identity": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\css\\Jogo.css",
+      "SourceId": "Jogo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\",
+      "BasePath": "_content/Jogo",
+      "RelativePath": "css/Jogo.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Jogo.css"
     },
     {
       "Identity": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\css\\site.css",

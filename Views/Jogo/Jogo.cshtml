@@ -1,0 +1,49 @@
+﻿@model Jogo.Models.Personagem
+@{
+    ViewData["Title"] = "Detalhes do Personagem";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Detalhes do Personagem</title>
+    <link rel="stylesheet" href="~/css/Jogo.css">
+</head>
+<body>
+
+    @if (Model != null)
+    {
+        <h1>@Model.Nome</h1>
+        <p>Level: @Model.Level</p>
+        <p>Classe: @Model.Classe</p>
+        <!-- Restante do código -->
+    }
+    else
+    {
+        <p>Personagem não encontrado.</p>
+    }
+
+    <section id="hud">
+        <h2>HUD</h2>
+        <ul>
+            <li>Arma: Cajado Mágico</li>
+            <li>Armadura: Manto Encantado</li>
+            <li>Acessório: Amuleto da Sabedoria</li>
+            <!-- Adicione mais itens conforme necessário -->
+        </ul>
+    </section>
+
+    <main>
+        <!-- Conteúdo principal aqui -->
+    </main>
+
+    <footer>
+        <p>&copy; 2023 - Seu Jogo</p>
+    </footer>
+
+    <!-- Botão de volta -->
+    <a href="/Personagem/Index">Voltar para a Lista de Personagens</a>
+
+</body>
+</html>

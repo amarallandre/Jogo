@@ -58,17 +58,14 @@ namespace Jogo.Controllers
         {
             var personagemSelecionado = _dbContext.Personagens.FirstOrDefault(p => p.Id == personagemId);
 
-            if (personagemSelecionado != null)
+            if (personagemSelecionado == null)
             {
-                // Serializar o objeto para JSON antes de armazená-lo na sessão
-                var personagemJson = JsonSerializer.Serialize(personagemSelecionado);
-
-                // Corrigir a chamada para a sessão
-                HttpContext.Session.SetString("PersonagemSelecionado", personagemJson);
+                // Lógica de tratamento de erro se o personagem não for encontrado
+                return RedirectToAction("Index");
             }
 
-            // Alteração aqui: redirecione para a ação Index da mesma controller
-            return RedirectToAction("Index");
+            // Alteração aqui: redirecione para a página "Jogo/Jogo" passando o id como parâmetro
+            return RedirectToAction("Jogo", new { id = personagemId });
         }
 
         public IActionResult Index()
@@ -91,6 +88,21 @@ namespace Jogo.Controllers
 
             // Redirecionar de volta para a página de personagens após a exclusão
             return RedirectToAction("Index", "Personagem");
+        }
+
+        public IActionResult Jogo(int id)
+        {
+            // Lógica para obter as informações detalhadas do personagem usando o ID
+            var personagem = _dbContext.Personagens.Find(id);
+
+            if (personagem == null)
+            {
+                // Lógica de tratamento de erro se o personagem não for encontrado
+                return RedirectToAction("Index");
+            }
+
+            // Passe as informações do personagem para a visualização
+            return View("~/Views/Jogo/Jogo.cshtml", personagem);
         }
     }
 }
