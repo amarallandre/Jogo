@@ -1,0 +1,48 @@
+﻿#EquipamentosTopo {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #0026ff
+}
+
+#EquipamentosTopo h2 {
+    color: #ffffff;
+}
+
+#EquipamentosTopo ul {
+    list-style: none;
+    padding: 0;
+}
+
+#EquipamentosTopo li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#EquipamentosTopo span {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#EquipamentosTopo span.no-equip {
+    color: #888888;
+}
+
+
+#EquipamentosTopo ul li {
+    position: relative;
+    background-color: #00ffff;
+    width: 170px;
+    height: 50px;
+}
+
+
+#EquipamentosTopo ul li.with-content {
+    background-color: #00ff00;
+}

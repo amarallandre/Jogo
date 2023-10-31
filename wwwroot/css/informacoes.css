@@ -1,0 +1,26 @@
+﻿#Informacoes {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #0026ff
+}
+
+#Informacoes h1 {
+    color: #ffffff;
+    position: relative;
+    bottom: 40px;
+}
+
+#Informacoes p {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: 40px;
+    font-weight: bold;
+    margin-right: 10px;
+}

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6vQ+cClKxn+ZE9LZ/j5BSENQdAJAWLc73N7Ov1FxMdk=",
+  "Hash": "NCsOC759IEEDY6KU6GeXeiMhFu1hmlpJPZQ6oB7o2wc=",
   "Source": "Jogo",
   "BasePath": "_content/Jogo",
   "Mode": "Default",
@@ -68,12 +68,12 @@
       "OriginalItemSpec": "wwwroot\\css\\CharCreator.css"
     },
     {
-      "Identity": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\css\\Jogo.css",
+      "Identity": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\css\\equipamentos.css",
       "SourceId": "Jogo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\",
       "BasePath": "_content/Jogo",
-      "RelativePath": "css/Jogo.css",
+      "RelativePath": "css/equipamentos.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -82,7 +82,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\Jogo.css"
+      "OriginalItemSpec": "wwwroot\\css\\equipamentos.css"
+    },
+    {
+      "Identity": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\css\\informacoes.css",
+      "SourceId": "Jogo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\",
+      "BasePath": "_content/Jogo",
+      "RelativePath": "css/informacoes.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\informacoes.css"
     },
     {
       "Identity": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\css\\site.css",

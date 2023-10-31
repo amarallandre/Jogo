@@ -1,35 +1,44 @@
 ﻿@model Jogo.Models.Personagem
+
 @{
     ViewData["Title"] = "Detalhes do Personagem";
 }
-
 <!DOCTYPE html>
 
 <html>
 <head>
     <title>Detalhes do Personagem</title>
-    <link rel="stylesheet" href="~/css/Jogo.css">
+    <link rel="stylesheet" href="~/css/informacoes.css">
+    <link rel="stylesheet" href="~/css/equipamentos.css">
 </head>
-<body>
 
+<body>
+    <section id="Informacoes">
     @if (Model != null)
     {
         <h1>@Model.Nome</h1>
         <p>Level: @Model.Level</p>
+        <p>EXP: @Model.Exp</p>
         <p>Classe: @Model.Classe</p>
-        <!-- Restante do código -->
+        <p>HP: @Model.HP</p>
+        <p>MP: @Model.MP</p>
+        <p>GOLD: </p>
+
+
     }
     else
     {
         <p>Personagem não encontrado.</p>
     }
+    </section>
 
-    <section id="hud">
-        <h2>HUD</h2>
+    <!-- Seção de Equipamentos com exemplos fictícios -->
+    <section id="EquipamentosTopo">
+        <h2>Equipamentos</h2>
         <ul>
-            <li>Arma: Cajado Mágico</li>
-            <li>Armadura: Manto Encantado</li>
-            <li>Acessório: Amuleto da Sabedoria</li>
+            <li><span>Arma:</span> <span>Nada equipado</span></li>
+            <li><span>Armadura:</span> <span>Armadura de Couro</span></li>
+            <li><span>Acessório:</span> <span>Nada equipado</span></li>
             <!-- Adicione mais itens conforme necessário -->
         </ul>
     </section>
@@ -38,12 +47,6 @@
         <!-- Conteúdo principal aqui -->
     </main>
 
-    <footer>
-        <p>&copy; 2023 - Seu Jogo</p>
-    </footer>
-
-    <!-- Botão de volta -->
-    <a href="/Personagem/Index">Voltar para a Lista de Personagens</a>
 
 </body>
 </html>
