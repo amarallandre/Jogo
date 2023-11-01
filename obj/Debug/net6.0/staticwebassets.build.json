@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NCsOC759IEEDY6KU6GeXeiMhFu1hmlpJPZQ6oB7o2wc=",
+  "Hash": "kJhjail5XDFKyv9rSzlJFrUcwBB8vpNLcUDOPgjOviA=",
   "Source": "Jogo",
   "BasePath": "_content/Jogo",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Jogo.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\css\\Batalha.css",
+      "SourceId": "Jogo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\",
+      "BasePath": "_content/Jogo",
+      "RelativePath": "css/Batalha.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Batalha.css"
     },
     {
       "Identity": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\css\\CharCreator.css",
@@ -134,6 +151,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\js\\Batalha.js",
+      "SourceId": "Jogo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\",
+      "BasePath": "_content/Jogo",
+      "RelativePath": "js/Batalha.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Batalha.js"
     },
     {
       "Identity": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\js\\site.js",

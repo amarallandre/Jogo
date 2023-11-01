@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Jogo.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\css\\Batalha.css",
+      "PackagePath": "staticwebassets\\css\\Batalha.css"
+    },
+    {
       "Id": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\css\\CharCreator.css",
       "PackagePath": "staticwebassets\\css\\CharCreator.css"
     },
@@ -23,6 +27,10 @@
     {
       "Id": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\js\\Batalha.js",
+      "PackagePath": "staticwebassets\\js\\Batalha.js"
     },
     {
       "Id": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\js\\site.js",

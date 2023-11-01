@@ -7,9 +7,10 @@
 
 <html>
 <head>
-    <title>Detalhes do Personagem</title>
+    <title>Pagina principal</title>
     <link rel="stylesheet" href="~/css/informacoes.css">
     <link rel="stylesheet" href="~/css/equipamentos.css">
+    <link rel="stylesheet" href="~/css/Batalha.css">
 </head>
 
 <body>
@@ -44,9 +45,23 @@
     </section>
 
     <main>
-        <!-- Conteúdo principal aqui -->
+        <button id="abrirbatalha">Batalha</button>
+
+        <div id="batalha" class="batalha">
+            <div class="conteudo-batalha">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <h2>Batalha</h2>
+                <div id="infoBatalhaPersonagem" class="infoBatalhaPersonagem">
+                    <h1>@Model.Nome</h1>
+                    <p>HP: @Model.HP</p>
+                    <p>MP: @Model.MP</p>
+                    <button onclick="realizarAtaque()">Realizar Ataque</button>
+                </div>
+            </div>
+        </div>
     </main>
 
+    <script src="~/js/Batalha.js"></script>
 
 </body>
 </html>
