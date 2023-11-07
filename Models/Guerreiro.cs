@@ -7,8 +7,8 @@
             Classe = "Guerreiro";
             DanoBase = 20;
             DefesaBase = 10;
-            HPBase = 120;
-            MPBase = 30;
+            HP = 120;
+            MP = 30;
         }
     }
 }

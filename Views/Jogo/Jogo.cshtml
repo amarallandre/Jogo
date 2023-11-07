@@ -1,13 +1,13 @@
-﻿@model Jogo.Models.Personagem
-
+﻿@model Jogo.Models.DetalhesJogoViewModel
 @{
-    ViewData["Title"] = "Detalhes do Personagem";
+    ViewData["Title"] = "Jogo";
 }
+
 <!DOCTYPE html>
 
 <html>
 <head>
-    <title>Pagina principal</title>
+    <title>Página principal</title>
     <link rel="stylesheet" href="~/css/informacoes.css">
     <link rel="stylesheet" href="~/css/equipamentos.css">
     <link rel="stylesheet" href="~/css/Batalha.css">
@@ -15,22 +15,20 @@
 
 <body>
     <section id="Informacoes">
-    @if (Model != null)
-    {
-        <h1>@Model.Nome</h1>
-        <p>Level: @Model.Level</p>
-        <p>EXP: @Model.Exp</p>
-        <p>Classe: @Model.Classe</p>
-        <p>HP: @Model.HP</p>
-        <p>MP: @Model.MP</p>
-        <p>GOLD: </p>
-
-
-    }
-    else
-    {
-        <p>Personagem não encontrado.</p>
-    }
+        @if (Model != null)
+        {
+            <h1>@Model.Personagem.Nome</h1>
+            <p>Level: @Model.Personagem.Level</p>
+            <p>EXP: @Model.Personagem.Exp</p>
+            <p>Classe: @Model.Personagem.Classe</p>
+            <p>HP: @Model.Personagem.HP</p>
+            <p>MP: @Model.Personagem.MP</p>
+            <p>GOLD: </p>
+        }
+        else
+        {
+            <p>Personagem não encontrado.</p>
+        }
     </section>
 
     <!-- Seção de Equipamentos com exemplos fictícios -->
@@ -45,19 +43,23 @@
     </section>
 
     <main>
-        <button id="abrirbatalha">Batalha</button>
+        <button id="abrirbatalha" onclick="openPopup()">Batalha</button>
 
-        <div id="batalha" class="batalha">
+        <div id="batalha" class="batalha" style="display: none;">
             <div class="conteudo-batalha">
                 <span class="close" onclick="closePopup()">&times;</span>
                 <h2>Batalha</h2>
                 <div id="infoBatalhaPersonagem" class="infoBatalhaPersonagem">
-                    <h1>@Model.Nome</h1>
-                    <p>HP: @Model.HP</p>
-                    <p>MP: @Model.MP</p>
+                    <h1>@Model.Personagem.Nome</h1>
+                    <p>HP: @Model.Personagem.HP</p>
+                    <p>MP: @Model.Personagem.MP</p>
                     <button onclick="realizarAtaque()">Realizar Ataque</button>
                 </div>
-            </div>
+
+                <div id="infoBatalhaInimigo" class="infoBatalhaInimigo">
+                    <h1 id="NomeInimigo">@Model.Inimigo.Nome</h1>
+                    <p>HP: <span id="hpInimigo">@Model.Inimigo.HP</span></p>
+                </div>
         </div>
     </main>
 

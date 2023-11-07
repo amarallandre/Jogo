@@ -65,7 +65,7 @@ namespace Jogo.Controllers
             }
 
             // Alteração aqui: redirecione para a página "Jogo/Jogo" passando o id como parâmetro
-            return RedirectToAction("Jogo", new { id = personagemId });
+            return RedirectToAction("Jogo", "Jogo", new { id = personagemId });
         }
 
         public IActionResult Index()

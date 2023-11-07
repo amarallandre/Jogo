@@ -34,11 +34,7 @@ app.UseEndpoints(endpoints =>
         name: "default",
         pattern: "{controller=Personagem}/{action=Index}/{id?}");
 
-    endpoints.MapControllerRoute(
-        name: "jogo",
-        pattern: "Jogo/Jogo/{id:int}",
-        defaults: new { controller = "Personagem", action = "Jogo" }
-    );
+
 });
 
 app.Run();

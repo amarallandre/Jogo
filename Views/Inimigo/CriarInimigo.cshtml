@@ -1,0 +1,45 @@
+﻿@model List<Jogo.Models.Inimigo>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Criar Inimigo</title>
+</head>
+<body>
+    <h1>Criar Inimigo</h1>
+
+    <form method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="Nome" required>
+
+        <label for="hp">HP:</label>
+        <input type="number" id="hp" name="HP" required>
+
+        <label for="dano">Dano:</label>
+        <input type="number" id="dano" name="Dano" required>
+
+        <button type="submit">Adicionar Inimigo</button>
+    </form>
+
+    @if (Model != null && Model.Any())
+    {
+        <h2>Inimigos Criados:</h2>
+        <ul>
+            @foreach (var inimigo in Model)
+            {
+                <li>
+                    @inimigo.Nome - HP: @inimigo.HP, Dano: @inimigo.Dano
+                    <form method="post" asp-action="ExcluirInimigo">
+                        <input type="hidden" name="inimigoId" value="@inimigo.Id" />
+                        <button type="submit">Excluir</button>
+                    </form>
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>Sem inimigos criados.</p>
+    }
+</body>
+</html>

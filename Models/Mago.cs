@@ -7,8 +7,8 @@
             Classe = "Mago";
             DanoBase = 15;
             DefesaBase = 5;
-            HPBase = 80;
-            MPBase = 100;
+            HP = 80;
+            MP = 100;
         }
     }
 }

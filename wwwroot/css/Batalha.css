@@ -6,35 +6,38 @@
     padding: 10px 20px;
     font-size: 16px;
     background-color: #3498db;
-    color:none;
+    color: #fff; /* Adicione uma cor válida aqui */
     border-radius: 5px;
     cursor: pointer;
 }
 
-
-
 .conteudo-batalha {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 47%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    padding: 250px;
+    width: 750px; /* Largura inicial */
+    height: 600px; /* Altura inicial */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .conteudo-batalha h2 {
-
-    position: relative;
-    bottom: 200px;
-
+    text-align: center; /* Centraliza o texto horizontalmente */
+    margin-top: 20px; /* Adiciona um espaço superior para alinhar verticalmente */
 }
 
 #infoBatalhaPersonagem {
     position: relative;
-    bottom: 100px;
-    right: 200px
+    top: 50px;
+    left: 50px;
+    background-color: blue;
+    padding: 20px; /* Ajuste o valor conforme necessário para alterar o tamanho da cor de fundo */
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+    color: white; /* Adiciona cor ao texto para garantir visibilidade */
+    width: 200px; /* Largura da caixa */
+    height: 170px;
 }
 
 #infoBatalhaPersonagem h1 {
@@ -50,6 +53,27 @@
     padding: 8px 12px;
     font-size: 16px;
     cursor: pointer;
+}
+
+#infoBatalhaInimigo {
+    position: relative;
+    bottom: 120px;
+    left: 500px;
+    background-color: blue;
+    padding: 20px; /* Ajuste o valor conforme necessário para alterar o tamanho da cor de fundo */
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+    color: white; /* Adiciona cor ao texto para garantir visibilidade */
+    width: 200px; /* Largura da caixa */
+    height: 170px;
+}
+
+#infoBatalhaInimigo h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+#infoBatalhaInimigo p {
+
 }
 
 .close {

@@ -7,8 +7,8 @@
             Classe = "Arqueiro";
             DanoBase = 12;
             DefesaBase = 8;
-            HPBase = 100;
-            MPBase = 50;
+            HP = 100;
+            MP = 50;
         }
     }
 }

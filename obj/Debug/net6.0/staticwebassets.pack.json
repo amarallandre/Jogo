@@ -33,10 +33,6 @@
       "PackagePath": "staticwebassets\\js\\Batalha.js"
     },
     {
-      "Id": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
-    },
-    {
       "Id": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },

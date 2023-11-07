@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kJhjail5XDFKyv9rSzlJFrUcwBB8vpNLcUDOPgjOviA=",
+  "Hash": "tzuu6xPBEczEW6pT1veQzE1TdBHf9dK0RsphVgdYeME=",
   "Source": "Jogo",
   "BasePath": "_content/Jogo",
   "Mode": "Default",
@@ -168,23 +168,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Batalha.js"
-    },
-    {
-      "Identity": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\js\\site.js",
-      "SourceId": "Jogo",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\",
-      "BasePath": "_content/Jogo",
-      "RelativePath": "js/site.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
       "Identity": "C:\\Users\\Usuario\\Desktop\\C#\\Jogo\\Jogo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

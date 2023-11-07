@@ -1,10 +1,12 @@
 function openPopup() {
     document.getElementById("batalha").style.display = "block";
+
 }
 
 // Função para fechar o pop-up
 function closePopup() {
     document.getElementById("batalha").style.display = "none";
+    location.reload(); // Isso recarregará a página atual
 }
 
 document.addEventListener("DOMContentLoaded", function () {

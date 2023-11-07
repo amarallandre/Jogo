@@ -46,5 +46,19 @@ namespace Jogo.Controllers
 
             return RedirectToAction("PersonagemCriado", new { nome = nome, classe = classe });
         }
+
+        private List<Inimigo> _inimigos = new List<Inimigo>();
+
+        public IActionResult CriarInimigo()
+        {
+            return View(_inimigos);
+        }
+
+        [HttpPost]
+        public IActionResult CriarInimigo(Inimigo inimigo)
+        {
+            _inimigos.Add(inimigo);
+            return View(_inimigos);
+        }
     }
 }
