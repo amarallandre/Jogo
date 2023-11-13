@@ -14,20 +14,52 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("abrirbatalha").addEventListener("click", openPopup);
 });
 
-// Função para realizar um ataque
 function realizarAtaque() {
-    // Simulação: Reduzir HP e MP ao realizar um ataque
-    var hpAtual = parseInt(document.getElementById("hpValue").textContent);
-    var mpAtual = parseInt(document.getElementById("mpValue").textContent);
+    // Obter o DanoBase do HTML
+    var danoBase = parseInt(document.getElementById("danoBaseValue").textContent);
 
-    // Reduz 10 de HP e 5 de MP (valores arbitrários)
-    hpAtual -= 10;
-    mpAtual -= 5;
+    // Obter o HP do inimigo do HTML
+    var hpInimigo = parseInt(document.getElementById("hpInimigo").textContent);
 
-    // Atualiza os valores exibidos
-    document.getElementById("hpValue").textContent = Math.max(0, hpAtual);
-    document.getElementById("mpValue").textContent = Math.max(0, mpAtual);
+    // Calcular o dano aleatório
+    var dano = calcularDano(danoBase);
 
-    // Exibe mensagem no console (substitua isso pela lógica real do seu jogo)
-    console.log("Ataque realizado! HP e MP reduzidos.");
+    // Reduzir o HP do inimigo
+    hpInimigo -= dano;
+
+    // Garantir que o HP não seja negativo
+    hpInimigo = Math.max(0, hpInimigo);
+
+    // Atualizar o HP do inimigo no HTML
+    document.getElementById("hpInimigo").textContent = hpInimigo;
+
+    // Verificar se o inimigo foi derrotado
+    if (hpInimigo === 0) {
+        exibirResultadoDoAtaque(dano);
+    } else {
+        alert("Ataque bem-sucedido! Dano causado: " + dano);
+    }
+}
+
+function calcularDano(danoBase) {
+    // Gerar um número aleatório entre 1 e o danoBase
+    var danoAleatorio = Math.floor(Math.random() * danoBase) + 1;
+
+    return danoAleatorio;
+}
+
+function exibirResultadoDoAtaque(dano) {
+    // Exibir ou processar o resultado do ataque
+    var confirmacao = confirm("Inimigo Derrotado! Dano causado: " + dano + "\nDeseja fechar a batalha?");
+    if (confirmacao) {
+        closePopup();
+    }
+}
+
+// Função para fechar o pop-up
+function closePopup() {
+    document.getElementById("batalha").style.display = "none";
+    location.reload(); // Isso recarregará a página atual
+    // Não há necessidade de recarregar a página aqui, remova a linha abaixo se não for necessário
+    // location.reload(); 
 }

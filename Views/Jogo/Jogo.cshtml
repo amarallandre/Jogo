@@ -24,6 +24,8 @@
             <p>HP: @Model.Personagem.HP</p>
             <p>MP: @Model.Personagem.MP</p>
             <p>GOLD: </p>
+            <p>Dano: <span id="danoBaseValue">@Model.Personagem.DanoBase</span></p>
+
         }
         else
         {
@@ -43,16 +45,18 @@
     </section>
 
     <main>
-        <button id="abrirbatalha" onclick="openPopup()">Batalha</button>
+        <button id="abrirbatalha">Batalha</button>
 
         <div id="batalha" class="batalha" style="display: none;">
             <div class="conteudo-batalha">
                 <span class="close" onclick="closePopup()">&times;</span>
+
                 <h2>Batalha</h2>
                 <div id="infoBatalhaPersonagem" class="infoBatalhaPersonagem">
                     <h1>@Model.Personagem.Nome</h1>
                     <p>HP: @Model.Personagem.HP</p>
                     <p>MP: @Model.Personagem.MP</p>
+                    
                     <button onclick="realizarAtaque()">Realizar Ataque</button>
                 </div>
 
@@ -60,6 +64,10 @@
                     <h1 id="NomeInimigo">@Model.Inimigo.Nome</h1>
                     <p>HP: <span id="hpInimigo">@Model.Inimigo.HP</span></p>
                 </div>
+
+                <div id="chat-box">
+                </div>
+
         </div>
     </main>
 

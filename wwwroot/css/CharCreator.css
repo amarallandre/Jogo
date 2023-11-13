@@ -79,3 +79,25 @@ button:hover {
 .botoesLista button {
     width: auto;
 }
+
+/* Estilo para o botão Adicionar Inimigo */
+.btn-adicionar-inimigo {
+    position: relative;
+    left: 500px;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #3498db; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Efeito de transição na cor de fundo */
+    /* Adiciona sombra ao botão */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito de hover */
+.btn-adicionar-inimigo:hover {
+    background-color: #2980b9; /* Cor de fundo alterada ao passar o mouse */
+}
