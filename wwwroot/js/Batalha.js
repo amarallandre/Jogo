@@ -3,63 +3,116 @@ function openPopup() {
 
 }
 
-// Função para fechar o pop-up
 function closePopup() {
     document.getElementById("batalha").style.display = "none";
-    location.reload(); // Isso recarregará a página atual
+    location.reload();
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Event listener para o botão de abrir pop-up
     document.getElementById("abrirbatalha").addEventListener("click", openPopup);
+    AtaqueInimigo();
 });
 
 function realizarAtaque() {
-    // Obter o DanoBase do HTML
     var danoBase = parseInt(document.getElementById("danoBaseValue").textContent);
-
-    // Obter o HP do inimigo do HTML
     var hpInimigo = parseInt(document.getElementById("hpInimigo").textContent);
-
-    // Calcular o dano aleatório
     var dano = calcularDano(danoBase);
 
-    // Reduzir o HP do inimigo
     hpInimigo -= dano;
-
-    // Garantir que o HP não seja negativo
     hpInimigo = Math.max(0, hpInimigo);
 
-    // Atualizar o HP do inimigo no HTML
     document.getElementById("hpInimigo").textContent = hpInimigo;
 
-    // Verificar se o inimigo foi derrotado
     if (hpInimigo === 0) {
-        exibirResultadoDoAtaque(dano);
+        exibirResultadoDoAtaque(dano, true);
     } else {
-        alert("Ataque bem-sucedido! Dano causado: " + dano);
+        exibirResultadoDoAtaque(dano, false);
+    }
+}
+
+function exibirResultadoDoAtaque(dano, vitoria) {
+    var chatBox = document.getElementById("chat-box");
+
+    var infoDano = document.createElement("div");
+
+    infoDano.textContent = "Ataque bem-sucedido! Dano causado: " + dano;
+
+    chatBox.appendChild(infoDano);
+
+    if (vitoria) {
+        alert("Inimigo Derrotado!");
+        location.reload();
+    }
+}
+
+function AtaqueInimigo() {
+    function loopAtaqueInimigo() {
+        // Verifique se o HP do personagem é maior que 0 antes de realizar o ataque
+        if (parseInt(document.getElementById("hpPersonagem").textContent) > 0) {
+            setTimeout(function () {
+                realizarAtaqueInimigo();
+                // Chame recursivamente a função loopAtaqueInimigo após um tempo de espera
+                loopAtaqueInimigo();
+            }, 1000); // Aguarde 1 segundo entre os ataques inimigos
+        }
+    }
+
+    // Inicie o loop de ataques inimigos
+    loopAtaqueInimigo();
+}
+
+
+function realizarAtaqueInimigo() {
+    var danoInimigo = parseInt(document.getElementById("danoInimigoValue").textContent);
+    var hpPersonagem = parseInt(document.getElementById("hpPersonagem").textContent);
+    var inimigoDano = calcularDanoInimigo(danoInimigo);
+
+    hpPersonagem -= inimigoDano;
+    hpPersonagem = Math.max(0, hpPersonagem);
+
+    document.getElementById("hpPersonagem").textContent = hpPersonagem;
+
+    if (hpPersonagem === 0) {
+        exibirResultadoDoAtaqueInimigo(inimigoDano, true); // Passando true para indicar que é uma vitória
+    } else {
+        exibirResultadoDoAtaqueInimigo(inimigoDano, false); // Passando false para indicar que não é uma vitória
+    }
+}
+
+function exibirResultadoDoAtaqueInimigo(inimigoDano, vitoria) {
+    var chatBox = document.getElementById("chat-box");
+
+    // Crie um novo elemento para a informação do dano do inimigo
+    var infoDanoInimigo = document.createElement("div");
+
+    // Adicione a informação do dano do inimigo à div chat-box
+    infoDanoInimigo.textContent = "Ataque do inimigo! Dano causado: " + inimigoDano;
+
+    // Adicione o novo elemento à div chat-box
+    chatBox.appendChild(infoDanoInimigo);
+
+    // Se for uma vitória, exiba um alerta
+    if (vitoria) {
+        alert("Você foi derrotado!");
+        location.reload();
     }
 }
 
 function calcularDano(danoBase) {
-    // Gerar um número aleatório entre 1 e o danoBase
     var danoAleatorio = Math.floor(Math.random() * danoBase) + 1;
 
     return danoAleatorio;
 }
+function calcularDanoInimigo(danoInimigo) {
+    var danoAleatorio = Math.floor(Math.random() * danoInimigo) + 1;
 
-function exibirResultadoDoAtaque(dano) {
-    // Exibir ou processar o resultado do ataque
-    var confirmacao = confirm("Inimigo Derrotado! Dano causado: " + dano + "\nDeseja fechar a batalha?");
-    if (confirmacao) {
-        closePopup();
-    }
+    return danoAleatorio;
 }
 
-// Função para fechar o pop-up
+
+
 function closePopup() {
     document.getElementById("batalha").style.display = "none";
-    location.reload(); // Isso recarregará a página atual
-    // Não há necessidade de recarregar a página aqui, remova a linha abaixo se não for necessário
-    // location.reload(); 
+    location.reload();
 }
+

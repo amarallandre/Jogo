@@ -54,15 +54,17 @@
                 <h2>Batalha</h2>
                 <div id="infoBatalhaPersonagem" class="infoBatalhaPersonagem">
                     <h1>@Model.Personagem.Nome</h1>
-                    <p>HP: @Model.Personagem.HP</p>
+                    <p>HP: <span id="hpPersonagem">@Model.Personagem.HP</span></p>
                     <p>MP: @Model.Personagem.MP</p>
                     
                     <button onclick="realizarAtaque()">Realizar Ataque</button>
                 </div>
 
                 <div id="infoBatalhaInimigo" class="infoBatalhaInimigo">
+
                     <h1 id="NomeInimigo">@Model.Inimigo.Nome</h1>
                     <p>HP: <span id="hpInimigo">@Model.Inimigo.HP</span></p>
+                    <p>Dano: <span id="danoInimigoValue">@Model.Inimigo.Dano</span></p>
                 </div>
 
                 <div id="chat-box">
