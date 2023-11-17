@@ -10,7 +10,12 @@ function closePopup() {
 
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("abrirbatalha").addEventListener("click", openPopup);
-    AtaqueInimigo();
+    document.getElementById("Lutar").addEventListener("click", function () {
+
+        document.getElementById("Lutar").style.display = "none";
+        // Inicie o loop de ataques inimigos quando o botão "Lutar" é clicado
+        AtaqueInimigo();
+    });
 });
 
 function realizarAtaque() {
@@ -47,14 +52,11 @@ function exibirResultadoDoAtaque(dano, vitoria) {
 
 function AtaqueInimigo() {
     function loopAtaqueInimigo() {
-        // Verifique se o HP do personagem é maior que 0 antes de realizar o ataque
-        if (parseInt(document.getElementById("hpPersonagem").textContent) > 0) {
-            setTimeout(function () {
-                realizarAtaqueInimigo();
-                // Chame recursivamente a função loopAtaqueInimigo após um tempo de espera
-                loopAtaqueInimigo();
-            }, 1000); // Aguarde 1 segundo entre os ataques inimigos
-        }
+        setTimeout(function () {
+            realizarAtaqueInimigo();
+            // Chame recursivamente a função loopAtaqueInimigo após um tempo de espera
+            loopAtaqueInimigo();
+        }, 5000); // Aguarde 1 segundo entre os ataques inimigos
     }
 
     // Inicie o loop de ataques inimigos

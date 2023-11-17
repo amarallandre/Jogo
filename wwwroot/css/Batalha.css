@@ -6,7 +6,7 @@
     padding: 10px 20px;
     font-size: 16px;
     background-color: #3498db;
-    color: #fff; /* Adicione uma cor válida aqui */
+    color:
     border-radius: 5px;
     cursor: pointer;
 }
@@ -17,15 +17,15 @@
     left: 47%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    width: 750px; /* Largura inicial */
-    height: 600px; /* Altura inicial */
+    width: 750px;
+    height: 600px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .conteudo-batalha h2 {
-    text-align: center; /* Centraliza o texto horizontalmente */
-    margin-top: 20px; /* Adiciona um espaço superior para alinhar verticalmente */
+    text-align: center;
+    margin-top: 20px;
 }
 
 #infoBatalhaPersonagem {
@@ -33,10 +33,10 @@
     top: 50px;
     left: 50px;
     background-color: blue;
-    padding: 20px; /* Ajuste o valor conforme necessário para alterar o tamanho da cor de fundo */
-    border-radius: 8px; /* Adiciona bordas arredondadas */
-    color: white; /* Adiciona cor ao texto para garantir visibilidade */
-    width: 200px; /* Largura da caixa */
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    width: 200px;
     height: 170px;
 }
 
@@ -55,15 +55,32 @@
     cursor: pointer;
 }
 
+#Lutar {
+    position: relative;
+    top: 330px;
+    left: 320px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer;
+}
+
+#Lutar:hover {
+    background-color: #45a049; /* Cor de fundo do botão quando o mouse está sobre ele */
+}
+
 #infoBatalhaInimigo {
     position: relative;
     bottom: 120px;
     left: 500px;
     background-color: blue;
-    padding: 20px; /* Ajuste o valor conforme necessário para alterar o tamanho da cor de fundo */
-    border-radius: 8px; /* Adiciona bordas arredondadas */
-    color: white; /* Adiciona cor ao texto para garantir visibilidade */
-    width: 200px; /* Largura da caixa */
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    width: 200px;
     height: 170px;
 }
 
@@ -88,6 +105,7 @@
 #chat-box {
     position: relative;
     left: 120px;
+    bottom: 60px;
     width: 500px;
     height: 200px;
     border: 1px solid #ccc;
